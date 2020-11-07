@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css - 选项卡更换背景图</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .big{
+            width:1250px;
+            height:480px;
+            border:1px solid black;
+
+            position: relative;
+        }
+
+        .tabs{
+            width:280px;
+            border:1px solid red;
+
+            position: absolute;
+            right:0;
+        }
+        .tabs .menu{
+            padding:20px 0px;
+            padding-left:20px;
+
+            border:1px solid black;
+
+            background: orange;
+
+            position: relative;
+            z-index: 1;
+        }
+        .tabs .menu span{
+            display: inline-block;
+            font-size:12px;
+            text-align: center;
+            color:#fff;
+            width:40px;
+            height:17px;
+            margin-right:5px;
+            background:url(imgs/tag-svg-bg-game.30862e2a.svg) no-repeat ;
+            display: none;
+        }
+        .tabs .menu p{
+            font-size:14px;
+            color: #666;
+            display: none;
+        }
+
+        /* 显示flag和文字 */
+        .tabs .menu:hover{
+            cursor: pointer;
+        }
+        .tabs .menu:hover span{
+            display: inline-block;
+        }
+        .tabs .menu:hover p{
+            display: block;
+        }   
+
+
+        /* 设置背景板 */
+        .bg{
+            width:1250px;
+            height:480px;
+            background:url(imgs/1.jpeg) no-repeat;
+
+            position: absolute;
+
+            right:0;
+            top:0;
+
+            z-index: 0;
+        }
+
+        /* 针对不同的li更改不同的背景 */
+        .tabs .menu:nth-child(1):hover ~ .bg{
+            background:url(imgs/1.jpeg)  no-repeat;
+        }
+
+        .tabs .menu:nth-child(2):hover ~ .bg{
+            background:url(imgs/2.jpeg)  no-repeat;
+        }
+
+        .tabs .menu:nth-child(3):hover ~ .bg{
+            background:url(imgs/3.jpeg)  no-repeat;
+        }
+        .tabs .menu:nth-child(4):hover ~ .bg{
+            background:url(imgs/4.jpeg)  no-repeat;
+        }
+        .tabs .menu:nth-child(5):hover ~ .bg{
+            background:url(imgs/5.jpeg)  no-repeat;
+        }
+        .tabs .menu:nth-child(6):hover ~ .bg{
+            background:url(imgs/6.jpeg)  no-repeat;
+        }
+        .tabs .menu:nth-child(7):hover ~ .bg{
+            background:url(imgs/7.jpeg)  no-repeat;
+        }
+      
+    </style>
+</head>
+<body>
+    <!-- 大块 -->
+    <div class="big">
+        <ul class="tabs">
+            <li class="menu">
+                <span>游戏</span>菜单1
+                <p>随便写点字，撑撑场面</p>
+            </li>
+            <li class="menu">
+                <span>游戏</span>菜单2
+                <p>随便写点字，撑撑场面</p>
+            </li>
+            <li class="menu">
+                <span>游戏</span>菜单3
+                <p>随便写点字，撑撑场面</p>
+            </li>
+            <li class="menu">
+                <span>游戏</span>菜单4
+                <p>随便写点字，撑撑场面</p>
+            </li>
+            <li class="menu">
+                <span>游戏</span>菜单5
+                <p>随便写点字，撑撑场面</p>
+            </li>
+            <li class="menu">
+                <span>游戏</span>菜单6
+                <p>随便写点字，撑撑场面</p>
+            </li>
+            <li class="menu">
+                <span>游戏</span>菜单7
+                <p>随便写点字，撑撑场面</p>
+            </li>
+            <li class="bg"></li>
+        </ul>
+    </div>
+</body>
+</html>

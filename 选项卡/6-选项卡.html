@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - 选项卡</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .swip {
+            width: 1000px;
+            height: 400px;
+            background: url(imgs/1.jpg);
+            background-size: 100%;
+            position: relative;
+            margin:0 auto ;
+        }
+
+        .menu {
+            position: absolute;
+            width: 280px;
+            margin: 0 auto;
+            right: 0;
+            z-index: 2;
+        }
+
+        .menu .menu-item {
+            padding: 14px 0px 17px 10px;
+            border: 1px solid black;
+            background-color: rgba(241, 232, 192, 0.721);
+            position: relative;
+            z-index: 3;
+            transition: all .5s;
+        }
+
+        .menu .menu-item:hover {
+            cursor: pointer;
+            background: linear-gradient(45deg, orange 30%, rgba(255, 165, 0, .6) 60%);
+
+        }
+
+        /* 悬挂.menu-item时，更改f的背景图 */
+        .menu-item:nth-child(1):hover~.f {
+            background: url(imgs/1.jpeg);
+        }
+
+        .menu-item:nth-child(2):hover~.f {
+            background: url(imgs/2.jpeg);
+        }
+
+        .menu-item:nth-child(3):hover~.f {
+            background: url(imgs/3.jpeg);
+        }
+
+        .menu-item:nth-child(4):hover~.f {
+            background: url(imgs/4.jpeg);
+        }
+
+        .menu-item:nth-child(5):hover~.f {
+            background: url(imgs/5.jpeg);
+        }
+
+        .menu-item:nth-child(6):hover~.f {
+            background: url(imgs/6.jpeg);
+        }
+
+        .menu-item:nth-child(7):hover~.f {
+            background: url(imgs/7.jpeg);
+        }
+
+
+        /* 显示小图标+文字 */
+        .menu .menu-item:hover i {
+            display: inline-block;
+        }
+
+        .menu .menu-item:hover p {
+            display: block;
+        }
+
+
+        .type {
+            width: 42px;
+            height: 20px;
+            display: inline-block;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            /* 正常字体 */
+            font-style: normal;
+            background: url(imgs/tag-svg-bg-game.30862e2a.svg);
+            /* 将当前标签移动至父标签的y轴正中间 */
+            vertical-align: middle;
+
+            display: none;
+
+        }
+
+        .type+span {
+            display: inline-block;
+            font-size: 14px;
+            vertical-align: middle;
+            margin-top: -2px;
+        }
+
+        .type~p {
+            font-size: 13px;
+            color: #666;
+            display: none;
+
+        }
+
+        .f {
+            width: 1000px;
+            height: 400px;
+            background: url(imgs/15980061573882.jpeg);
+            background-size: auto 400px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: all .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swip">
+        <ul class="menu">
+            <li class="menu-item">
+                <i class="type">游戏</i>
+                <span>菜单1</span>
+                <p>随便搞搞</p>
+            </li>
+            <li class="menu-item">
+                <i class="type">游戏</i>
+                <span>菜单2</span>
+                <p>随便搞搞</p>
+            </li>
+            <li class="menu-item">
+                <i class="type">游戏</i>
+                <span>菜单3</span>
+                <p>随便搞搞</p>
+            </li>
+            <li class="menu-item">
+                <i class="type">游戏</i>
+                <span>菜单4</span>
+                <p>随便搞搞</p>
+            </li>
+            <li class="menu-item">
+                <i class="type">游戏</i>
+                <span>菜单5</span>
+                <p>随便搞搞</p>
+            </li>
+            <li class="menu-item">
+                <i class="type">游戏</i>
+                <span>菜单6</span>
+                <p>随便搞搞</p>
+            </li>
+            <li class="menu-item">
+                <i class="type">游戏</i>
+                <span>菜单7</span>
+                <p>随便搞搞</p>
+            </li>
+            <li class="f"></li>
+        </ul>
+    </div>
+</body>
+
+</html>
